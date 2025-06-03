@@ -3,5 +3,8 @@
         "psr-4": {
             "src\\": "src/"
         }
+    },
+    "require": {
+        "php-tui/php-tui": "^0.2.1"
     }
 }
