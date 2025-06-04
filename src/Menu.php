@@ -1,4 +1,5 @@
 <?php
+namespace src;
 class Menu{
     public $data;
     public function __construct() {
@@ -15,12 +16,17 @@ class Menu{
     public function choiceMenu(){
         $choice = $this->showMenu();
         switch($choice){
-            case 1:
+            case "1":
                 $this->data->setFormatUrl("?format=%c%t");
             break;
-            case 2:
+            case "2":
                 $this->data->setFormatUrl(null);
             break;
+            case "3":
+                exit(0);
+            break;
+            default:
+                echo "Неверный выбор!\n";
         }
     }
 }

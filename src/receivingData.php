@@ -15,7 +15,7 @@ public function getCity():string {
     return $this->city;
 }
 public function setUrl($city):void {
-    $this->url = "https://wttr.in/" . $city . "?format=%c%t";
+    $this->url = "https://wttr.in/" . $city . $this->getFormatUrl();
 }
 public function getUrl():string {
     return $this->url;
@@ -23,7 +23,7 @@ public function getUrl():string {
 public function setFormatUrl($formatUrl):void {
     $this->formatUrl = $formatUrl;
 }
-public function getFormatUrl():string {
-    return $this->formatUrl;
+public function getFormatUrl(): string {
+    return $this->formatUrl ?? '';
 }
 }
